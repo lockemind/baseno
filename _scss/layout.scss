@@ -2,10 +2,13 @@
 //
 // Styles for managing the structural hierarchy of the site.
 
+$baseBaseno1: '/draftbaseno/images/baseno-background.png';
+$baseBaseno2: '/draftbaseno/images/baseno-background.png';
+
 body{ margin:0px 0px; }
 
 #hero{
-  background-image:url('/images/baseno-background.png');
+  background-image:url($baseBaseno1);
   background-size:cover;
   position:relative;
   height:100vh;
