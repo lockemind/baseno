@@ -4,28 +4,21 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="/css/styles.scss">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700" media="all">
   </head>
   <body>
-    <header>
-      <div class="container">
-        <nav class="main-nav">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/blog.html">Blog</a></li>
-          </ul>
-        </nav>
-        <h1><a href="/">Coffee<strong>Cafe</strong></a></h1>
+    <div id="wrapper">
+      <div id="hero">
+        <div class="header">
+          <h1> Baseno </h1>
+        </div>
       </div>
-    </header>
-    <div class="content">
-      {{ content }}
+      {{content}}
+      {% include footer.html %}
     </div>
-    <footer>
-      <div class="container">
-        <p class="center-text"> <a href="http://cloudcannon.com">Created by CloudCannon</a></p>
-      </div>
-    </footer>
+
   </body>
 </html>
+
+
