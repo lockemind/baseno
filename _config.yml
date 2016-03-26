@@ -10,7 +10,6 @@ permalink:           pretty
 title:               Baseno
 tagline:             Starting draft for Baseno site of a Jekyll site with Sass enabled.
 url:                 http://lockemind.github.io/draftbaseno
-baseurl:             /baseno/
 
 # Assets
 #
