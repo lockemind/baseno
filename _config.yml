@@ -1,0 +1,21 @@
+# Syntax highlighting
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Baseno
+tagline:             Starting draft for Baseno site of a Jekyll site with Sass enabled.
+url:                 http://lockemind.github.io/draftbaseno
+baseurl:             /baseno/
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _scss
+  #style:            :compressed
