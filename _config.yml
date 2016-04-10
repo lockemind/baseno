@@ -14,6 +14,7 @@ baseurl:             /draftbaseno/
 
 # Assets
 sass:
-  load_paths:
-    - _scss
-    - bower_components/bootstrap-sass/assets/stylesheets
+  #load_paths:
+  #  - _scss
+  #  - bower_components/bootstrap-sass/assets/stylesheets
+  sass_dir:          _scss
