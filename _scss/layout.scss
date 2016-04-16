@@ -3,9 +3,10 @@
 // Styles for managing the structural hierarchy of the site.
 
 $baseBaseno1: '/draftbaseno/images/baseno-background.png';
-$baseBaseno2: '/draftbaseno/images/baseno-background.png';
+$logoBackgroundBaseno: '/draftbaseno/images/baseno-logo-background.png';
 $basenoColor1: #3c817c;
 $basenoColor2: #F2F2F2;
+$basenoColor3: black;
 
 body{ margin:0px 0px; }
 
@@ -44,9 +45,11 @@ body{ margin:0px 0px; }
       }
 
     }
-
   }
-
+  .baseno-down-arrow {
+    color: $basenoColor2;
+    margin-top: 50px;
+  }
 }
 
 #content{
@@ -56,14 +59,57 @@ body{ margin:0px 0px; }
   margin:0px auto;
 }
 
+.baseno-nav {
+  border-top: #000000 solid 2px;
+  border-bottom: #000000 solid 2px;
+  height: 64px;
+  line-height: 64px;
+  .baseno-menu-links{
+    font-size:16px;
+    font-weight: 500;
+
+    li {
+      a {
+        text-decoration: none;
+        color: $basenoColor3;
+      }
+      display:inline;
+      padding-left: 10px;
+    }
+  }
+}
+
 #content h2{
   margin:0px 0px 30px 0px;
 }
 
-//#footer{
-//  padding:30px 0px;
-//  text-align:center;
-//  background:#ddd;
-//}
+.item {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  width: 50%;
+  display: block;
+  padding: 20px;
+  background-size: 100%;
+  transform-origin: center center;
+  background-position:50% 50%;
+  margin-bottom: 10px;
+  //@include transition(all 0.5s ease);
 
+  &:hover {
+    background-size: 105%;
+    cursor: pointer;
+  }
+
+  .content {
+    background: white;
+    color:$basenoColor1;
+    line-height: 26px;
+    font-size: 27px;
+    font-weight: 500;
+  }
+}
+
+.baseno-logo-background {
+  background-image: url($logoBackgroundBaseno);
+}
 
