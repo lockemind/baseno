@@ -8,6 +8,10 @@ $basenoColor1: #3c817c;
 $basenoColor2: #F2F2F2;
 $basenoColor3: black;
 
+$hidro: '/draftbaseno/images/hidrodinamica.png';
+$meso: '/draftbaseno/images/mesoescala.png';
+$stat: '/draftbaseno/images/estatistica.png';
+
 body{ margin:0px 0px; }
 
 #hero{
@@ -60,10 +64,10 @@ body{ margin:0px 0px; }
 }
 
 .baseno-nav {
-  border-top: #000000 solid 2px;
-  border-bottom: #000000 solid 2px;
-  height: 64px;
-  line-height: 64px;
+  //border-top: #000000 solid 2px;
+  //border-bottom: #000000 solid 2px;
+  //height: 64px;
+  //line-height: 64px;
   .baseno-menu-links{
     font-size:16px;
     font-weight: 500;
@@ -112,4 +116,20 @@ body{ margin:0px 0px; }
 .baseno-logo-background {
   background-image: url($logoBackgroundBaseno);
 }
+
+
+.baseno-small-section {
+  border-top: #000000 solid 2px;
+  height: 64px;
+  line-height: 64px;
+}
+
+.baseno-section {
+  border-top: #000000 solid 2px;
+  padding: 50px;
+}
+
+
+
+
 
