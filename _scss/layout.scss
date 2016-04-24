@@ -3,10 +3,11 @@
 // Styles for managing the structural hierarchy of the site.
 
 $baseBaseno1: '/draftbaseno/images/baseno-background.png';
-$logoBackgroundBaseno: '/draftbaseno/images/baseno-logo-background.png';
+$logoBackgroundBaseno: '/draftbaseno/images/baseno-background.png';
 $basenoColor1: #3c817c;
 $basenoColor2: #F2F2F2;
 $basenoColor3: black;
+$basenoColor4: #1A9F96;
 
 $hidro: '/draftbaseno/images/hidrodinamica.png';
 $meso: '/draftbaseno/images/mesoescala.png';
@@ -71,7 +72,7 @@ body{ margin:0px 0px; }
   .baseno-menu-links{
     font-size:16px;
     font-weight: 500;
-
+    margin-top: 25px;
     li {
       a {
         text-decoration: none;
@@ -90,13 +91,17 @@ body{ margin:0px 0px; }
 .item {
   font-family: 'Open Sans', sans-serif;
   font-size: 12px;
-  width: 50%;
+  width: 132px;
   display: block;
-  padding: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
   background-size: 100%;
   transform-origin: center center;
   background-position:50% 50%;
   margin-bottom: 10px;
+  margin-top: 8px;
   //@include transition(all 0.5s ease);
 
   &:hover {
@@ -106,10 +111,14 @@ body{ margin:0px 0px; }
 
   .content {
     background: white;
-    color:$basenoColor1;
-    line-height: 26px;
-    font-size: 27px;
-    font-weight: 500;
+    color:$basenoColor4;
+    //line-height: 26px;
+    font-size: 25px;
+    font-weight: 800;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 0px;
   }
 }
 
@@ -119,15 +128,31 @@ body{ margin:0px 0px; }
 
 
 .baseno-small-section {
-  border-top: #000000 solid 2px;
-  height: 64px;
-  line-height: 64px;
+  border-top: #000000 solid 4px;
+  height: 75px;
+  //line-height: 64px;
+  left-padding: 50px;
+  right-padding: 50px;
+  &-margin {
+   margin-top: 16px;
+  }
 }
-
 .baseno-section {
-  border-top: #000000 solid 2px;
+  border-top: #000000 solid 4px;
   padding: 50px;
 }
+
+.baseno-button {
+  border: $basenoColor1 solid 4px;
+  color: $basenoColor1;
+  font-size: 13px;
+  font-weight: 800;
+  width: 105px;
+  padding-left: 6px;
+  padding-right: 6px;
+}
+
+
 
 
 
