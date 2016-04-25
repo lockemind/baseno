@@ -4,6 +4,8 @@
 
 $baseBaseno1: '/draftbaseno/images/baseno-background.png';
 $logoBackgroundBaseno: '/draftbaseno/images/baseno-background.png';
+$img1: '/draftbaseno/images/placeholder_image1.png';
+
 $basenoColor1: #3c817c;
 $basenoColor2: #F2F2F2;
 $basenoColor3: black;
@@ -37,23 +39,75 @@ body{ margin:0px 0px; }
         padding: 5px;
         background-color: $basenoColor2;
     }
-    .baseno-copy{
-      padding-top: 200px;
-      color: $basenoColor2;
-      &-header {
-        font-size:30px;
-        font-weight: 500;
-      }
-      &-text{
-        font-size:30px;
-        font-weight: 300;
-      }
 
-    }
   }
   .baseno-down-arrow {
     color: $basenoColor2;
     margin-top: 50px;
+  }
+}
+
+.baseno-box {
+  font-size: 18px;
+  font-weight: 600;
+  color: #3c817c;
+  width: 180px;
+  padding: 10px;
+  background-color: $basenoColor2;
+}
+
+.baseno-top-margin {
+  margin-top: 50px;
+  &-small{
+    margin-top: 30px;
+  }
+  &-big{
+    margin-top: 200px;
+  }
+}
+
+.baseno-bottom-margin {
+  margin-bottom: 50px;
+  &-small{
+    margin-bottom: 30px;
+  }
+  &-big{
+    margin-bottom: 200px;
+  }
+}
+
+.baseno-top-pad {
+  padding-top: 50px;
+  &-big{
+    padding-top: 200px;
+  }
+}
+
+.baseno-copy{
+  color: $basenoColor2;
+  &-header {
+    font-size:30px;
+    font-weight: 500;
+  }
+  &-text{
+    font-size:30px;
+    font-weight: 300;
+  }
+}
+
+.baseno-copy-negative{
+  color: black;
+  &-header {
+    font-size:30px;
+    font-weight: 500;
+  }
+  &-text{
+    font-size:30px;
+    font-weight: 300;
+    &-small{
+      font-size: 18px;
+      font-weight: 400;
+    }
   }
 }
 
@@ -140,6 +194,9 @@ body{ margin:0px 0px; }
 .baseno-section {
   border-top: #000000 solid 4px;
   padding: 50px;
+  &-blog{
+    padding-top:10px;
+  }
 }
 
 .baseno-button {
@@ -150,8 +207,17 @@ body{ margin:0px 0px; }
   width: 105px;
   padding-left: 6px;
   padding-right: 6px;
+  &-big {
+    @extend .baseno-button;
+    font-size: 16px;
+    width: 126px;
+  }
 }
 
+.img1 {
+  background-image: url($img1);
+  height: 645px;
+}
 
 
 
