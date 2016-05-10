@@ -24,6 +24,7 @@ body{ margin:0px 0px; }
   background-size:cover;
   position:relative;
   height:100vh;
+  border-bottom: #000000 solid 4px;
 }
 
 .header{
@@ -170,7 +171,6 @@ body{ margin:0px 0px; }
 }
 
 .baseno-nav {
-  //border-top: #000000 solid 2px;
   //border-bottom: #000000 solid 2px;
   //height: 64px;
   //line-height: 64px;
@@ -241,6 +241,11 @@ body{ margin:0px 0px; }
   &-margin {
    margin-top: 16px;
   }
+  &-no-top {
+    @extend .baseno-small-section;
+    border-top: 0;
+    height: 71px;
+  }
 }
 .baseno-section {
   border-top: #000000 solid 4px;
@@ -262,6 +267,10 @@ body{ margin:0px 0px; }
     @extend .baseno-button;
     font-size: 16px;
     width: 126px;
+  }
+  a {
+    text-decoration: none;
+    color: $basenoColor1;
   }
 }
 
