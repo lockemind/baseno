@@ -14,7 +14,9 @@ $baseno-logo: '/draftbaseno/images/baseno_logo.png';
 $logoBackgroundBaseno: '/draftbaseno/images/baseno-background.png';
 $img1: '/draftbaseno/images/placeholder_image1.png';
 $projec1: '/draftbaseno/images/projecto1.png';
-
+$expert1: '/draftbaseno/images/mesoescala_barragens.png';
+$expert2: '/draftbaseno/images/projecto1.png';
+$expert3: '/draftbaseno/images/hidrodin_Fig_7b.png';
 
 $basenoColor1: #3c817c;
 $basenoColor2: #F2F2F2;
@@ -38,6 +40,40 @@ body{
 
 h3 {
   font-size: 25px;
+  font-weight: 700;
+}
+
+.baseno-big-title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.baseno-big-text {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.baseno-title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.baseno-small-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.baseno-bold {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.baseno-small-button {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.baseno-button {
+  font-size: 18px;
   font-weight: 700;
 }
 
@@ -115,6 +151,9 @@ h3 {
   }
   &-big{
     margin-bottom: 200px;
+  }
+  &-big2{
+    margin-bottom: 80px;
   }
 }
 
@@ -289,6 +328,9 @@ h2 {
   &-blog{
     padding-top:10px;
   }
+  &-no-top-padding{
+    padding-top: 0;
+  }
 }
 
 .baseno-button {
@@ -320,7 +362,23 @@ h2 {
   height: 645px;
 }
 
-
+.baseno-expertise-img {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  &1 {
+    @extend .baseno-expertise-img;
+    background-image: url($expert1);
+  }
+  &2 {
+    @extend .baseno-expertise-img;
+    background-image: url($expert2);
+  }
+  &3 {
+    @extend .baseno-expertise-img;
+    background-image: url($expert3);
+  }
+}
 
 
 
