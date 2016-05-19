@@ -14,6 +14,9 @@ $baseno-logo: '/draftbaseno/images/baseno_logo.png';
 $logoBackgroundBaseno: '/draftbaseno/images/baseno-background.png';
 $img1: '/draftbaseno/images/placeholder_image1.png';
 $projec1: '/draftbaseno/images/projecto1.png';
+$about1: '/draftbaseno/images/placeholder_image1.png';
+$team1: '/draftbaseno/images/dummy_team_member.png';
+
 $expert1: '/draftbaseno/images/mesoescala_barragens.png';
 $expert2: '/draftbaseno/images/projecto1.png';
 $expert3: '/draftbaseno/images/hidrodin_Fig_7b.png';
@@ -133,6 +136,9 @@ h3 {
   &-small{
     margin-top: 30px;
   }
+  &-smallish{
+    margin-top: 20px;
+  }
   &-very-small{
     margin-top: 10px;
   }
@@ -140,6 +146,9 @@ h3 {
     margin-top: 5px;
   }
   &-big{
+    margin-top: 100px;
+  }
+  &-very-big{
     margin-top: 200px;
   }
 }
@@ -354,12 +363,31 @@ h2 {
 
 .img1 {
   background-image: url($img1);
+  background-size: cover;
   height: 645px;
 }
 
 .project-img1 {
   background-image: url($projec1);
+  background-size: cover;
   height: 645px;
+}
+
+.about-img1 {
+  background-image: url($about1);
+  background-size: cover;
+  height: 645px;
+}
+
+.team-img1 {
+  background-image: url($team1);
+  background-size: cover;
+  height: 220px;
+  width: 310px;
+}
+
+.baseno-team-member-name {
+  margin-bottom: 0;
 }
 
 .baseno-expertise-img {
