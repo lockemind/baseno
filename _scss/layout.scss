@@ -15,6 +15,7 @@ $logoBackgroundBaseno: '/draftbaseno/images/baseno-background.png';
 $img1: '/draftbaseno/images/placeholder_image1.png';
 $projec1: '/draftbaseno/images/projecto1.png';
 $about1: '/draftbaseno/images/placeholder_image1.png';
+$contact1: '/draftbaseno/images/contact_us.png';
 $team1: '/draftbaseno/images/dummy_team_member.png';
 
 $expert1: '/draftbaseno/images/mesoescala_barragens.png';
@@ -54,11 +55,19 @@ h3 {
 .baseno-big-text {
   font-size: 25px;
   font-weight: 400;
+  &-colored {
+    @extend .baseno-big-text;
+    color: $basenoColor4;
+  }
 }
 
 .baseno-title {
   font-size: 25px;
   font-weight: 700;
+  &-colored {
+    @extend .baseno-title;
+    color: $basenoColor4;
+  }
 }
 
 .baseno-small-title {
@@ -378,6 +387,13 @@ h2 {
   background-size: cover;
   height: 645px;
 }
+
+.contact-img1 {
+  background-image: url($contact1);
+  background-size: cover;
+  height: 645px;
+}
+
 
 .team-img1 {
   background-image: url($team1);
