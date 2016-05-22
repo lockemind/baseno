@@ -1,9 +1,46 @@
 /**
  * Created by narc on 21/05/16.
  */
+(function($,sr){
+
+    // debouncing function from John Hann
+    // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
+    var debounce = function (func, threshold, execAsap) {
+        var timeout;
+
+        return function debounced () {
+            var obj = this, args = arguments;
+            function delayed () {
+                if (!execAsap)
+                    func.apply(obj, args);
+                timeout = null;
+            };
+
+            if (timeout)
+                clearTimeout(timeout);
+            else if (execAsap)
+                func.apply(obj, args);
+
+            timeout = setTimeout(delayed, threshold || 100);
+        };
+    }
+    // smartresize
+    jQuery.fn[sr] = function(fn){  return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr); };
+
+})(jQuery,'smartresize');
 
 
-$( document ).ready(function() {
+// usage:
+$(window).smartresize(function(){
+    // code that takes it easy...
+    setHeaderSize();
+});
+
+
+setHeaderSize();
+
+
+$(document).ready(function() {
     console.log( "ready!" );
     var pathname = window.location.pathname; // Returns path only
     var url      = window.location.href;     // Returns full URL
@@ -21,4 +58,13 @@ $( document ).ready(function() {
 function scrollToAnchor(aid){
     var aTag = $("a[name='"+ aid +"']");
     $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}
+
+
+function setHeaderSize(){
+    var vHeight = $(window).height(),
+        vWidth = $(window).width(),
+        header_cover = $('.header');
+
+    header_cover.css({"height":vHeight,"width":vWidth});
 }

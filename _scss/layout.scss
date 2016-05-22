@@ -57,7 +57,19 @@ h3 {
   font-weight: 400;
   &-colored {
     @extend .baseno-big-text;
-    color: $basenoColor4;
+    a {
+      color: $basenoColor4;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    &:hover{
+      a {
+        color: $basenoColor4;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
   }
 }
 
@@ -84,53 +96,27 @@ h3 {
   font-weight: 700;
 }
 
-.baseno-button {
-  font-size: 18px;
-  font-weight: 700;
-}
-
 .main-logo {
   border-radius: 0;
 }
 
-#hero{
+.header{
+  position:relative;
   background-image:url($baseBaseno1);
   background-size:cover;
-  position:relative;
-  height:100vh;
   border-bottom: #000000 solid 4px;
-}
-
-.header{
-  width:100%;
-  font-size:30px;
-  font-weight: 700;
   .container{
     padding-top: 50px;
     text-align: left;
-    .baseno-box {
-      font-size:30px;
-
-      color: $basenoColor1;
-      width: 140px;
-      padding: 5px;
-      background-color: $basenoColor2;
-    }
-
   }
   .baseno-down-arrow {
     color: $basenoColor2;
     margin-top: 50px;
+    i {
+      font-size: 30px;
+      font-weight: 700;
+    }
   }
-}
-
-.baseno-box {
-  font-size: 20px;
-  font-weight: 700;
-  color: #3c817c;
-  width: 200px;
-  padding: 10px;
-  background-color: $basenoColor2;
 }
 
 .baseno-logo {
@@ -352,18 +338,55 @@ h2 {
   }
 }
 
+.baseno-button-inverted {
+  font-size: 20px;
+  font-weight: 700;
+  color: $basenoColor1;
+  width: 200px;
+  padding: 4px;
+  background-color: $basenoColor2;
+  border: $basenoColor2 solid 4px;
+  a {
+    text-decoration: none;
+    color: $basenoColor1;
+  }
+  &:hover{
+    border: $basenoColor2 solid 4px;
+    background-color: transparent;
+    a {
+      color: $basenoColor2;
+    }
+  }
+}
+
 .baseno-button {
   border: $basenoColor1 solid 4px;
   color: $basenoColor1;
-  font-size: 12px;
-  font-weight: 700;
-  width: 105px;
   padding-left: 6px;
   padding-right: 6px;
+  &-small {
+    @extend .baseno-button;
+    font-size: 12px;
+    width: 105px;
+    &:hover{
+      border: $basenoColor1 solid 4px;
+      background-color: $basenoColor1;
+      a {
+        color: $basenoColor2;
+      }
+    }
+  }
   &-big {
     @extend .baseno-button;
     font-size: 18px;
     width: 145px;
+    &:hover{
+      border: $basenoColor1 solid 4px;
+      background-color: $basenoColor1;
+      a {
+        color: $basenoColor2;
+      }
+    }
   }
   a {
     text-decoration: none;
