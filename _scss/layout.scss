@@ -109,10 +109,14 @@ h3 {
     padding-top: 50px;
     text-align: left;
   }
+  .baseno-copy {
+    padding-top: 25%;
+  }
   .baseno-down-arrow {
     color: $basenoColor2;
-    margin-top: 50px;
+    margin-top: 10%;
     i {
+      cursor: pointer;
       font-size: 30px;
       font-weight: 700;
     }
