@@ -105,6 +105,7 @@ h3 {
   background-image:url($baseBaseno1);
   background-size:cover;
   border-bottom: #000000 solid 4px;
+  overflow: hidden;
   .container{
     padding-top: 50px;
     text-align: left;
@@ -114,7 +115,9 @@ h3 {
   }
   .baseno-down-arrow {
     color: $basenoColor2;
-    margin-top: 10%;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
     i {
       cursor: pointer;
       font-size: 30px;
@@ -228,6 +231,9 @@ h3 {
     color: $basenoColor1;
     font-size:50px;
     margin-top: 30px;
+    i {
+      cursor: pointer;
+    }
   }
 }
 
@@ -334,11 +340,14 @@ h2 {
 .baseno-section {
   border-top: #000000 solid 4px;
   padding: 50px;
-  &-blog{
-    padding-top:10px;
+  &-blog {
+    padding-top: 10px;
   }
-  &-no-top-padding{
+  &-no-top-padding {
     padding-top: 0;
+  }
+  &-no-padding {
+    padding: 0;
   }
 }
 
@@ -450,6 +459,13 @@ h2 {
     @extend .baseno-expertise-img;
     background-image: url($expert3);
   }
+}
+
+.project-slider {
+  width: 100%;
+
+
+
 }
 
 

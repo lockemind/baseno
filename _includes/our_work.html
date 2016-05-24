@@ -9,7 +9,15 @@
     </div>
 </div>
 
-<div class="baseno-section">
+
+<ul class="posts">
+    inside posts 22
+    {% for project in site.projects %}
+    <li><span>{{ project.date | date_to_string }}</span> &raquo; <a href="{{ project.url }}">{{ project.title }}</a></li>
+    {% endfor %}
+</ul>
+
+    <div class="baseno-section">
     <div class="container">
         <div class="baseno-work">
             <div class="row">

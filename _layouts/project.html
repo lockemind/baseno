@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
     <link rel="stylesheet" href="/draftbaseno/css/styles.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700" media="all">
   </head>
@@ -11,19 +12,27 @@
 
 
     {% include nav.html %}
+    <div class="clearfix"></div>
 
-    <div class="baseno-section project-img1"></div>
+    <div class="baseno-section baseno-section-no-padding project-slider" >
+      <img src="/draftbaseno/images/placeholder_image1.png">
+      <img src="/draftbaseno/images/projecto1.png">
+      <img src="/draftbaseno/images/placeholder_image1.png">
+      <img src="/draftbaseno/images/contact_us.png">
+      <img src="/draftbaseno/images/dummy_team_member.png">
+    </div>
 
+    <div class="clearfix"></div>
     <div class="baseno-section">
         <div class="container">
           <div class="baseno-project">
             <div class="row">
-              <div class="col-md-4 baseno-project-menu"> <i class="glyphicon glyphicon-menu-left"></i> </div>
+              <div class="col-md-4 baseno-project-menu"> <i onclick="$('.project-slider').slick('slickPrev');" title="Previous" class="baseno-slide-previous glyphicon glyphicon-menu-left"></i> </div>
               <div class="col-md-6">
                 <div class="baseno-project-header">Título do Projecto um bocado mais longo mais</div>
                 <div class="baseno-project-text-small baseno-top-margin-very-small">Meso escala - Análise estatística dos extremos </div>
               </div>
-              <div class="col-md-2 baseno-project-menu"> <i class=" glyphicon glyphicon-menu-right"></i> </div>
+              <div class="col-md-2 baseno-project-menu"> <i onclick="$('.project-slider').slick('slickNext');" title="Next" class="baseno-slide-next glyphicon glyphicon-menu-right"></i> </div>
             </div>
           </div>
         </div>
@@ -54,5 +63,6 @@
     {{content}}
 
     {% include baseno_script.html %}
+    <script type="text/javascript" src="/draftbaseno/scripts/baseno-slick.js"></script>
   </body>
 </html>

@@ -42,7 +42,6 @@ if (sessionStorage.navigation_reached) {
 setHeaderSize();
 
 
-
 var navigation_reached = new Waypoint({
     element: document.getElementById('nav'),
     handler: function(direction) {
@@ -50,8 +49,7 @@ var navigation_reached = new Waypoint({
             sessionStorage.navigation_reached = true;
         }
     }
-})
-
+});
 
 
 $(document).ready(function() {
@@ -83,8 +81,6 @@ function setHeaderSize(){
     var vHeight = $(window).height(),
         vWidth = $(window).width(),
         header_cover = $('.header');
-        header_down_arrow = $('.header .baseno-down-arrow');
 
     header_cover.css({"height":vHeight,"width":vWidth});
-
 }
