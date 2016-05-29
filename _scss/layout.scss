@@ -213,6 +213,15 @@ h3 {
       color: $basenoColor1;
     }
   }
+  &-download{
+    text-align: center;
+  }
+  &-download-info{
+    margin:5px;
+    font-size:16px;
+    font-weight: 400;
+    color: $basenoColor1;
+  }
 }
 
 .baseno-project{
@@ -359,52 +368,45 @@ h2 {
   padding: 4px;
   background-color: $basenoColor2;
   border: $basenoColor2 solid 4px;
-  a {
-    text-decoration: none;
-    color: $basenoColor1;
-  }
+  text-decoration: none;
+  color: $basenoColor1;
   &:hover{
     border: $basenoColor2 solid 4px;
     background-color: transparent;
-    a {
-      color: $basenoColor2;
-    }
+    text-decoration: none;
+    color: $basenoColor2;
   }
 }
 
 .baseno-button {
-  border: $basenoColor1 solid 4px;
+  border: $basenoColor1 solid 3px;
   color: $basenoColor1;
-  padding-left: 6px;
-  padding-right: 6px;
+  padding: 4px;
   &-small {
     @extend .baseno-button;
     font-size: 12px;
-    width: 105px;
     &:hover{
-      border: $basenoColor1 solid 4px;
+      border: $basenoColor1 solid 3px;
       background-color: $basenoColor1;
-      a {
-        color: $basenoColor2;
-      }
+      text-decoration: none;
+      color: $basenoColor2;
     }
   }
   &-big {
     @extend .baseno-button;
+    padding: 6px;
     font-size: 18px;
-    width: 145px;
+    white-space: nowrap;
+    border: $basenoColor1 solid 3px;
     &:hover{
-      border: $basenoColor1 solid 4px;
+      border: $basenoColor1 solid 3px;
       background-color: $basenoColor1;
-      a {
-        color: $basenoColor2;
-      }
+      text-decoration: none;
+      color: $basenoColor2;
     }
   }
-  a {
-    text-decoration: none;
-    color: $basenoColor1;
-  }
+  text-decoration: none;
+  color: $basenoColor1;
 }
 
 .img1 {
@@ -463,7 +465,9 @@ h2 {
 
 .project-slider {
   width: 100%;
-
+  img {
+    margin:0;
+  }
 
 
 }
