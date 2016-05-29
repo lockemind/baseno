@@ -9,11 +9,11 @@
   </head>
   <body>
 
+    {% if page.show_hero %}
     {% include header.html %}
+    {% endif %}
+
     {% include nav.html %}
-    {% include what_we_do.html %}
-    {% include blog.html %}
-    {% include who_we_are.html %}
 
     {{content}}
 
