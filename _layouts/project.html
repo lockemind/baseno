@@ -1,25 +1,12 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>{{ page.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-    <link rel="stylesheet" href="/draftbaseno/css/styles.css">
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,700" media="all">
-  </head>
-  <body>
-
-
-    {% include nav.html %}
+---
+layout: default
+---
     <div class="clearfix"></div>
 
-    <div class="baseno-section baseno-section-no-padding project-slider" >
-      <img src="/draftbaseno/images/placeholder_image1.png">
-      <img src="/draftbaseno/images/projecto1.png">
-      <img src="/draftbaseno/images/placeholder_image1.png">
-      <img src="/draftbaseno/images/contact_us.png">
-      <img src="/draftbaseno/images/dummy_team_member.png">
+    <div class="baseno-section baseno-section-no-padding project-slider">
+      {% for image in page.images %}
+      <img src="/draftbaseno/images/{{image}}">
+      {% endfor %}
     </div>
 
     <div class="clearfix"></div>
@@ -29,8 +16,8 @@
             <div class="row">
               <div class="col-md-4 baseno-project-menu"> <i onclick="$('.project-slider').slick('slickPrev');" title="Previous" class="baseno-slide-previous glyphicon glyphicon-menu-left"></i> </div>
               <div class="col-md-6">
-                <div class="baseno-project-header">Título do Projecto um bocado mais longo mais</div>
-                <div class="baseno-project-text-small baseno-top-margin-very-small">Meso escala - Análise estatística dos extremos </div>
+                <div class="baseno-project-header">{{page.title}}</div>
+                <div class="baseno-project-text-small baseno-top-margin-very-small">{{page.description}}</div>
               </div>
               <div class="col-md-2 baseno-project-menu"> <i onclick="$('.project-slider').slick('slickNext');" title="Next" class="baseno-slide-next glyphicon glyphicon-menu-right"></i> </div>
             </div>
@@ -50,33 +37,7 @@
               </div>
             </div>
             <div class="col-md-8">
-              <p class="baseno-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-                Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-                Lorem ipsum dolor sit amet, consectetur adipiscing
-                elit,
-                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
+              {{content}}
             </div>
 
           </div>
@@ -84,9 +45,5 @@
       </div>
     </div>
 
-    {{content}}
 
-    {% include baseno_script.html %}
-    <script type="text/javascript" src="/draftbaseno/scripts/baseno-slick.js"></script>
-  </body>
-</html>
+

@@ -9,52 +9,22 @@
     </div>
 </div>
 
-
-<ul class="posts">
-    test for project loop:
-    {% for project in site.projects %}
-    <li><span>{{ project.date | date_to_string }}</span> &raquo; <a href="{{ project.url }}">{{ project.title }}</a></li>
-    {% endfor %}
-</ul>
-
-    <div class="baseno-section">
-    <div class="container">
-        <div class="baseno-work">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-6">
-                    <div class="baseno-work-header">Título do Projecto
-                    </div>
-                    <div class="baseno-work-text-small baseno-top-margin-very-small">Hidrodinâmica - Análise estatística dos extremos
-                    </div>
-
-                </div>
-                <div class="col-md-2">
-                    <div class="baseno-top-margin-very-very-small">
-                        <a class="baseno-button-big" href="/draftbaseno/projects/1">KNOW MORE</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
+{% for project in site.projects %}
 <div class="baseno-section">
     <div class="container">
         <div class="baseno-work">
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-6">
-                    <div class="baseno-work-header">Título do Projecto um bocado mais longo mais
+                    <div class="baseno-work-header">{{project.title}}
                     </div>
-                    <div class="baseno-work-text-small baseno-top-margin-very-small">Meso escala - Análise estatística dos extremos
+                    <div class="baseno-work-text-small baseno-top-margin-very-small">{{project.description}}
                     </div>
 
                 </div>
                 <div class="col-md-2">
                     <div class="baseno-top-margin-very-very-small">
-                        <a class="baseno-button-big" href="/draftbaseno/projects/1">KNOW MORE</a>
+                        <a class="baseno-button-big" href="{{site.baseurl}}{{project.url}}">KNOW MORE</a>
                     </div>
                 </div>
 
@@ -62,72 +32,4 @@
         </div>
     </div>
 </div>
-
-<div class="baseno-section">
-    <div class="container">
-        <div class="baseno-work">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-6">
-                    <div class="baseno-work-header">Título do Projecto
-                    </div>
-                    <div class="baseno-work-text-small baseno-top-margin-very-small">Hidrodinâmica - Meso escala - Análise estatística dos extremos
-                    </div>
-
-                </div>
-                <div class="col-md-2">
-                    <div class="baseno-top-margin-very-very-small">
-                        <a class="baseno-button-big" href="/draftbaseno/projects/1">KNOW MORE</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="baseno-section">
-    <div class="container">
-        <div class="baseno-work">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-6">
-                    <div class="baseno-work-header">Título do Projecto
-                    </div>
-                    <div class="baseno-work-text-small baseno-top-margin-very-small">Hidrodinâmica - Análise estatística dos extremos
-                    </div>
-
-                </div>
-                <div class="col-md-2">
-                    <div class="baseno-top-margin-very-very-small">
-                        <a class="baseno-button-big" href="/draftbaseno/projects/1">KNOW MORE</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="baseno-section">
-    <div class="container">
-        <div class="baseno-work">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-6">
-                    <div class="baseno-work-header">Título do Projecto um bocado mais longo mais</div>
-                    <div class="baseno-work-text-small baseno-top-margin-very-small">Meso escala - Análise estatística dos extremos
-                </div>
-
-                </div>
-                <div class="col-md-2">
-                    <div class="baseno-top-margin-very-very-small">
-                        <a class="baseno-button-big" href="/draftbaseno/projects/1">KNOW MORE</a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
+{% endfor %}
