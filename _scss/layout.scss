@@ -41,6 +41,7 @@ body{
   font-weight: 400;
   font-size: 16px;
   color: black;
+  line-height: 1.6;
 }
 
 h3 {
@@ -84,6 +85,10 @@ h3 {
   &-colored {
     @extend .baseno-title;
     color: $basenoColor4;
+  }
+  &-regular {
+    @extend .baseno-title;
+    font-weight: 400;
   }
 }
 
@@ -224,8 +229,9 @@ h3 {
     text-align: center;
   }
   &-download-info{
-    margin:5px;
-    font-size:16px;
+    margin:15px;
+
+  font-size:16px;
     font-weight: 400;
     color: $basenoColor1;
   }
@@ -285,7 +291,7 @@ h3 {
         }
       }
       display:inline;
-      padding-left: 10px;
+      padding-left: 20px;
     }
   }
   .baseno-menu-social-links{
@@ -379,7 +385,7 @@ h2 {
   font-weight: 700;
   color: $basenoColor1;
   width: 200px;
-  padding: 4px;
+  padding: 6px;
   background-color: $basenoColor2;
   border: $basenoColor2 solid 4px;
   text-decoration: none;
@@ -395,7 +401,7 @@ h2 {
 .baseno-button {
   border: $basenoColor1 solid 3px;
   color: $basenoColor1;
-  padding: 4px;
+  padding: 6px;
   &-small {
     @extend .baseno-button;
     font-size: 12px;
@@ -408,12 +414,12 @@ h2 {
   }
   &-big {
     @extend .baseno-button;
-    padding: 6px;
+    padding: 8px;
     font-size: 18px;
     white-space: nowrap;
-    border: $basenoColor1 solid 3px;
+    border: $basenoColor1 solid 4px;
     &:hover{
-      border: $basenoColor1 solid 3px;
+      border: $basenoColor1 solid 4px;
       background-color: $basenoColor1;
       text-decoration: none;
       color: $basenoColor2;
@@ -457,6 +463,12 @@ h2 {
 
 .baseno-team-member-name {
   margin-bottom: 0;
+}
+
+.baseno-expertise{
+  p {
+    margin-top: 15px;
+  }
 }
 
 .baseno-expertise-img {
