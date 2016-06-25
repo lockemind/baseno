@@ -40,11 +40,16 @@ body{
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 16px;
+  color: black;
 }
 
 h3 {
   font-size: 25px;
   font-weight: 700;
+}
+
+.spacer {
+  padding-bottom: 15px;
 }
 
 .baseno-big-title {
@@ -195,6 +200,9 @@ h3 {
   }
   &-text{
     font-size:30px;
+    &-medium{
+      font-size: 26px;
+    }
     &-small{
       font-size: 18px;
     }
@@ -205,7 +213,6 @@ h3 {
   color: black;
   &-header {
     font-size:30px;
-    font-weight: 700;
   }
   &-text{
     font-size:25px;
@@ -224,11 +231,18 @@ h3 {
   }
 }
 
+.baseno-project-hover img{
+  display: none;
+}
+
+.baseno-project-hover:hover img{
+  display: block;
+}
+
 .baseno-project{
   color: black;
   &-header {
     font-size:30px;
-    font-weight: 700;
   }
   &-text{
     font-size:30px;
@@ -470,6 +484,26 @@ h2 {
   }
 }
 
+.slide-legend{
+  font-weight: 400;
+  font-size: 16px;
+  color: $basenoColor1;
+  width: 30px;
+  cursor: pointer;
+}
+//
+/*.slide-previous:hover{
+  i {opacity: 0}
+}
+.slide-previous:hover:after{
+  content: 'Previous Project';
+}
+
+.slide-previous-legend:hover{
+  opacity:1;
+}*/
+
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px) {
 
@@ -485,6 +519,47 @@ h2 {
 
 }
 
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) and (orientation:landscape){
+  .baseno-copy{
+    color: $basenoColor2;
+    &-header {
+      font-size:30px - 5px;
+      font-weight: 700;
+    }
+    &-text{
+      font-size:25px  - 5px;
+      font-weight: 400;
+    }
+  }
+
+  .header{
+    position:relative;
+    background-image:url($baseBaseno1);
+    background-size:cover;
+    border-bottom: #000000 solid 4px;
+    overflow: hidden;
+    .container{
+      padding-top: 50px;
+      text-align: left;
+    }
+    .baseno-copy {
+      padding-top: 0;
+    }
+    .baseno-down-arrow {
+      color: $basenoColor2;
+      position: absolute;
+      bottom: 3%;
+      left: 50%;
+      i {
+        cursor: pointer;
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
 
@@ -493,8 +568,42 @@ h2 {
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
 
+  .header{
+    position:relative;
+    background-image:url($baseBaseno1);
+    background-size:cover;
+    border-bottom: #000000 solid 4px;
+    overflow: hidden;
+    .container{
+      padding-top: 50px;
+      text-align: left;
+    }
+    .baseno-copy {
+      padding-top: 0;
+    }
+    .baseno-down-arrow {
+      color: $basenoColor2;
+      position: absolute;
+      bottom: 3%;
+      left: 50%;
+      i {
+        cursor: pointer;
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+  }
+
 }
 
+
+@media all and (orientation:portrait) {
+  /* Styles for Portrait screen */
+}
+
+@media all and (orientation:landscape) {
+  /* Styles for Landscape screen */
+}
 
 
 

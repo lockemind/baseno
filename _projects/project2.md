@@ -2,6 +2,7 @@
 layout: project
 title: Título do Projecto um bocado mais longo mais
 description: Meso escala - Análise estatística dos extremos
+cover-image: projecto1.png
 images: 
   - placeholder_image1.png
   - projecto1.png

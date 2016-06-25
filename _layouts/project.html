@@ -14,12 +14,20 @@ layout: default
         <div class="container">
           <div class="baseno-project">
             <div class="row">
-              <div class="col-md-4 baseno-project-menu"> <i onclick="$('.project-slider').slick('slickPrev');" title="Previous" class="baseno-slide-previous glyphicon glyphicon-menu-left"></i> </div>
+                <div class="col-md-4 baseno-project-menu">
+                    <div class="slide-previous" onclick="$('.project-slider').slick('slickPrev');">
+                        <i title="Previous" class="baseno-slide-previous glyphicon glyphicon-menu-left"></i>
+                    </div>
+                </div>
               <div class="col-md-6">
                 <div class="baseno-project-header">{{page.title}}</div>
                 <div class="baseno-project-text-small baseno-top-margin-very-small">{{page.description}}</div>
               </div>
-              <div class="col-md-2 baseno-project-menu"> <i onclick="$('.project-slider').slick('slickNext');" title="Next" class="baseno-slide-next glyphicon glyphicon-menu-right"></i> </div>
+                <div class="col-md-2 baseno-project-menu">
+                    <div class="slide-next" onclick="$('.project-slider').slick('slickNext');">
+                        <i title="Next" class="baseno-slide-next glyphicon glyphicon-menu-right"></i>
+                    </div>
+                </div>
             </div>
           </div>
         </div>

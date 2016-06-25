@@ -2,6 +2,7 @@
 layout: project
 title: Título do Projecto
 description: Hidrodinâmica - Análise estatística dos extremos
+cover-image: dummy_team_member.png
 images: 
   - placeholder_image1.png
   - projecto1.png
