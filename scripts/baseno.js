@@ -38,6 +38,7 @@ $(window).smartresize(function(){
 if (sessionStorage.navigation_reached) {
     var header_cover = $('.header');
     header_cover.css({"display":"none"});
+    $('.baseno-nav').addClass('navbar-fixed-top');
 }
 setHeaderSize();
 
@@ -47,6 +48,10 @@ var navigation_reached = new Waypoint({
     handler: function(direction) {
         if (sessionStorage.navigation_reached != true) {
             sessionStorage.navigation_reached = true;
+            var header_cover = $('.header');
+            header_cover.fadeOut();
+            $(window).scrollTop(0);
+            $('.baseno-nav').addClass('navbar-fixed-top');
         }
     }
 });
@@ -84,3 +89,12 @@ function setHeaderSize(){
 
     header_cover.css({"height":vHeight,"width":vWidth});
 }
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > 1){
+        $('baseno-nav').addClass("sticky");
+    }
+    else{
+        $('baseno-nav').removeClass("sticky");
+    }
+});

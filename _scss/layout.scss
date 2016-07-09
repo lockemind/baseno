@@ -273,10 +273,11 @@ h3 {
   margin:0px auto;
 }
 
+.sticky {
+  position: fixed;
+}
+
 .baseno-nav {
-  //border-bottom: #000000 solid 2px;
-  //height: 64px;
-  //line-height: 64px;
   .baseno-menu-links{
     font-size:16px;
     font-weight: 700;
