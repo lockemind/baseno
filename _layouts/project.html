@@ -1,0 +1,57 @@
+---
+layout: default
+---
+    <div class="clearfix"></div>
+
+    <div class="baseno-section baseno-section-no-padding project-slider">
+      {% for image in page.images %}
+      <img src="/baseno/images/{{image}}">
+      {% endfor %}
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="baseno-section">
+        <div class="container">
+          <div class="baseno-project">
+            <div class="row">
+                <div class="col-md-4 baseno-project-menu">
+                    <div class="slide-previous" onclick="$('.project-slider').slick('slickPrev');">
+                        <i title="Previous" class="baseno-slide-previous glyphicon glyphicon-menu-left"></i>
+                    </div>
+                </div>
+              <div class="col-md-6">
+                <div class="baseno-project-header">{{page.title}}</div>
+                <div class="baseno-project-text-small baseno-top-margin-very-small">{{page.description}}</div>
+              </div>
+                <div class="col-md-2 baseno-project-menu">
+                    <div class="slide-next" onclick="$('.project-slider').slick('slickNext');">
+                        <i title="Next" class="baseno-slide-next glyphicon glyphicon-menu-right"></i>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="baseno-section baseno-bottom-margin">
+      <div class="container">
+        <div class="baseno-copy-negative baseno-top-pad">
+          <div class="row">
+            <div class="baseno-copy-negative-header col-md-4">
+              <div class="baseno-work-download">
+                <a class="baseno-button-big" href="">DOWNLOAD CASE STUDY</a>
+                <div class="baseno-work-download-info">PDF - 3,9Mb</div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              {{content}}
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+

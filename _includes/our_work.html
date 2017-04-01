@@ -1,0 +1,35 @@
+<div class="clearfix"></div>
+
+<div class="baseno-small-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4"><h2 class="baseno-small-section-margin" id="#work">Our work</h2></div>
+            <div class="col-sm-8"></div>
+        </div>
+    </div>
+</div>
+
+{% for project in site.projects %}
+<div class="baseno-section baseno-project-hover">
+    <div class="container">
+        <div class="baseno-work">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="main-logo " src="/baseno/images/{{project.cover-image}}" alt="Baseno">
+                </div>
+                <div class="col-md-6">
+                    <div class="baseno-work-header">{{project.title}}
+                    </div>
+                    <div class="baseno-work-text-small baseno-top-margin-very-small">{{project.description}}
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="baseno-top-margin-very-very-small">
+                        <a class="baseno-button-small" href="{{site.baseurl}}{{project.url}}">KNOW MORE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}

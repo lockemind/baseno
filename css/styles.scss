@@ -1,0 +1,20 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+@charset "utf-8";
+
+/* path to glyphicons */
+$icon-font-path: "fonts/bootstrap/";
+
+/* custom variable */
+$body-bg: red;
+
+
+/* any style customization must be before the bootstrap import */
+@import "bootstrap";
+
+
+// Imports
+@import "base";
+@import "layout";
+

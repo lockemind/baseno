@@ -1,0 +1,22 @@
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+
+# Setup
+title:               Baseno
+tagline:             Starting draft for Baseno site of a Jekyll site with Sass enabled.
+url:                 http://lockemind.github.io/baseno
+baseurl:             /baseno/
+
+# Assets
+sass:
+  #load_paths:
+  #  - _scss
+  #  - bower_components/bootstrap-sass/assets/stylesheets
+  sass_dir:          _scss
+
+
+collections:
+  projects:
+    output: true

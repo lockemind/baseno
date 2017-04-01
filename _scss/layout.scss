@@ -1,0 +1,641 @@
+// Layout
+//
+// Styles for managing the structural hierarchy of the site.
+
+// Font variables
+$font-name: "Baseno";
+$font-path-file-name: "/baseno/fonts/Montserrat-Regular";
+$bold-font-path-file-name: "/baseno/fonts/Montserrat-Bold";
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+$baseBaseno1: '/baseno/images/bg_fold.png';
+$baseno-logo: '/baseno/images/baseno_logo.png';
+$logoBackgroundBaseno: '/baseno/images/baseno-background.png';
+$img1: '/baseno/images/pic-home.png';
+$projec1: '/baseno/images/projecto1.png';
+$about1: '/baseno/images/pic-home.png';
+$contact1: '/baseno/images/contact_us.png';
+$team1: '/baseno/images/artur_silva.png';
+$team2: '/baseno/images/jose_delgado.png';
+$team3: '/baseno/images/pedro_morgado.png';
+$team4: '/baseno/images/ricardo_canelas.png';
+
+$expert1: '/baseno/images/processos_hidrologicos.png';
+$expert2: '/baseno/images/expertise_hidrodinamica.png';
+$expert3: '/baseno/images/expertise_hidrologia_estatistica.png';
+
+$basenoColor1: #3c817c;
+$basenoColor2: #F2F2F2;
+$basenoColor3: black;
+$basenoColor4: #1A9F96;
+
+$facebook: '/baseno/images/social_fb.png';
+$linkedin: '/baseno/images/social_linkedin.png';
+$twitter: '/baseno/images/social_twitter.png';
+
+$hidro: '/baseno/images/hidrodinamica.png';
+$meso: '/baseno/images/mesoescala.png';
+$stat: '/baseno/images/estatistica.png';
+
+body{
+  margin:0px 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+  line-height: 1.6;
+}
+
+h3 {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.spacer {
+  padding-bottom: 15px;
+}
+
+.baseno-big-title {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.baseno-big-text {
+  font-size: 25px;
+  font-weight: 400;
+  &-colored {
+    @extend .baseno-big-text;
+    a {
+      color: $basenoColor4;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    &:hover{
+      a {
+        color: $basenoColor4;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.baseno-title {
+  font-size: 25px;
+  font-weight: 700;
+  &-colored {
+    @extend .baseno-title;
+    color: $basenoColor4;
+  }
+  &-regular {
+    @extend .baseno-title;
+    font-weight: 400;
+  }
+}
+
+.baseno-small-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+.baseno-bold {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.baseno-small-button {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.main-logo {
+  border-radius: 0;
+}
+
+.header{
+  position:relative;
+  background-image:url($baseBaseno1);
+  background-size:cover;
+  border-bottom: #000000 solid 4px;
+  overflow: hidden;
+  .container{
+    padding-top: 50px;
+    text-align: left;
+  }
+  .baseno-copy {
+    padding-top: 25%;
+  }
+  .baseno-down-arrow {
+    color: $basenoColor2;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    i {
+      cursor: pointer;
+      font-size: 30px;
+      font-weight: 700;
+    }
+  }
+}
+
+.baseno-logo {
+  margin-top: 10px;
+  img {
+    margin-bottom: 0;
+  }
+}
+
+.baseno-top-margin {
+  margin-top: 50px;
+  &-small{
+    margin-top: 30px;
+  }
+  &-smallish{
+    margin-top: 20px;
+  }
+  &-very-small{
+    margin-top: 10px;
+  }
+  &-very-very-small{
+    margin-top: 5px;
+  }
+  &-big{
+    margin-top: 100px;
+  }
+  &-very-big{
+    margin-top: 200px;
+  }
+}
+
+.baseno-bottom-margin {
+  margin-bottom: 50px;
+  &-small{
+    margin-bottom: 30px;
+  }
+  &-big{
+    margin-bottom: 200px;
+  }
+  &-big2{
+    margin-bottom: 80px;
+  }
+}
+
+.baseno-top-pad {
+  padding-top: 50px;
+  &-big{
+    padding-top: 200px;
+  }
+}
+
+.baseno-copy{
+  color: $basenoColor2;
+  &-header {
+    font-size:30px;
+    font-weight: 700;
+  }
+  &-text{
+    font-size:25px;
+    font-weight: 400;
+  }
+}
+
+.baseno-copy-negative{
+  color: black;
+  &-header {
+    font-size:25px;
+    font-weight: 700;
+  }
+  &-text{
+    font-size:30px;
+    &-medium{
+      font-size: 26px;
+    }
+    &-small{
+      font-size: 18px;
+    }
+  }
+}
+
+.baseno-work{
+  color: black;
+  &-header {
+    font-size:30px;
+  }
+  &-text{
+    font-size:25px;
+    &-small{
+      color: $basenoColor1;
+    }
+  }
+  &-download{
+    text-align: center;
+  }
+  &-download-info{
+    margin:15px;
+
+  font-size:16px;
+    font-weight: 400;
+    color: $basenoColor1;
+  }
+}
+
+.baseno-project-hover img{
+  display: none;
+}
+
+.baseno-project-hover:hover img{
+  display: block;
+}
+
+.baseno-project{
+  color: black;
+  &-header {
+    font-size:30px;
+  }
+  &-text{
+    font-size:30px;
+    &-small{
+      font-size: 18px;
+    }
+  }
+  &-menu{
+    color: $basenoColor1;
+    font-size:50px;
+    margin-top: 30px;
+    i {
+      cursor: pointer;
+    }
+  }
+}
+
+#content{
+  padding:100px 50px;
+  text-align:center;
+  width:80%;
+  margin:0px auto;
+}
+
+.baseno-nav {
+  //border-bottom: #000000 solid 2px;
+  //height: 64px;
+  //line-height: 64px;
+  .baseno-menu-links{
+    font-size:16px;
+    font-weight: 700;
+    margin-top: 25px;
+    li {
+      a {
+        text-decoration: none;
+        color: $basenoColor3;
+        img{
+          display:inline;
+          border-radius: 0;
+        }
+      }
+      display:inline;
+      padding-left: 20px;
+    }
+  }
+  .baseno-menu-social-links{
+    @extend .baseno-menu-links;
+    li {
+      padding-left: 0;
+    }
+  }
+}
+
+#content h2{
+  margin:0px 0px 30px 0px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.item {
+  //font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  width: 132px;
+  display: block;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  background-size: 100%;
+  transform-origin: center center;
+  background-position:50% 50%;
+  margin-bottom: 10px;
+  margin-top: 8px;
+  //@include transition(all 0.5s ease);
+
+  &:hover {
+    background-size: 105%;
+    cursor: pointer;
+  }
+
+  .content {
+    background: white;
+    color:$basenoColor4;
+    //line-height: 26px;
+    font-size: 25px;
+    font-weight: bold;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 0px;
+  }
+}
+
+.baseno-logo-background {
+  background-image: url($logoBackgroundBaseno);
+  background-size: cover;
+}
+
+
+.baseno-small-section {
+  border-top: #000000 solid 4px;
+  height: 75px;
+  //line-height: 64px;
+  left-padding: 50px;
+  right-padding: 50px;
+  &-margin {
+   margin-top: 16px;
+  }
+  &-no-top {
+    @extend .baseno-small-section;
+    border-top: 0;
+    height: 71px;
+  }
+}
+.baseno-section {
+  border-top: #000000 solid 4px;
+  padding: 50px;
+  &-blog {
+    padding-top: 10px;
+  }
+  &-no-top-padding {
+    padding-top: 0;
+  }
+  &-no-padding {
+    padding: 0;
+  }
+}
+
+.baseno-button-inverted {
+  font-size: 20px;
+  font-weight: 700;
+  color: $basenoColor1;
+  width: 200px;
+  padding: 6px;
+  background-color: $basenoColor2;
+  border: $basenoColor2 solid 4px;
+  text-decoration: none;
+  color: $basenoColor1;
+  &:hover{
+    border: $basenoColor2 solid 4px;
+    background-color: transparent;
+    text-decoration: none;
+    color: $basenoColor2;
+  }
+}
+
+.baseno-button {
+  border: $basenoColor1 solid 3px;
+  color: $basenoColor1;
+  padding: 6px;
+  &-small {
+    @extend .baseno-button;
+    font-size: 12px;
+    &:hover{
+      border: $basenoColor1 solid 3px;
+      background-color: $basenoColor1;
+      text-decoration: none;
+      color: $basenoColor2;
+    }
+  }
+  &-big {
+    @extend .baseno-button;
+    padding: 8px;
+    font-size: 18px;
+    white-space: nowrap;
+    border: $basenoColor1 solid 4px;
+    &:hover{
+      border: $basenoColor1 solid 4px;
+      background-color: $basenoColor1;
+      text-decoration: none;
+      color: $basenoColor2;
+    }
+  }
+  text-decoration: none;
+  color: $basenoColor1;
+}
+
+.img1 {
+  background-image: url($img1);
+  background-size: cover;
+  height: 645px;
+}
+
+.project-img1 {
+  background-image: url($projec1);
+  background-size: cover;
+  height: 645px;
+}
+
+.about-img1 {
+  background-image: url($about1);
+  background-size: cover;
+  height: 645px;
+}
+
+.contact-img1 {
+  background-image: url($baseBaseno1);
+  background-size: cover;
+  height: 645px;
+}
+
+
+.team-img {
+  background-size: cover;
+  height: 220px;
+  width: 310px;
+  &1 {
+    @extend .team-img;
+    background-image: url($team1);
+  }
+  &2 {
+    @extend .team-img;
+    background-image: url($team2);
+  }
+  &3 {
+    @extend .team-img;
+    background-image: url($team3);
+  }
+  &4 {
+    @extend .team-img;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url($team4);
+  }
+}
+
+.baseno-team-member-name {
+  margin-bottom: 0;
+}
+
+.baseno-expertise{
+  p {
+    margin-top: 15px;
+  }
+}
+
+.baseno-expertise-img {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  &1 {
+    @extend .baseno-expertise-img;
+    background-image: url($expert1);
+  }
+  &2 {
+    @extend .baseno-expertise-img;
+    background-image: url($expert2);
+  }
+  &3 {
+    @extend .baseno-expertise-img;
+    background-image: url($expert3);
+  }
+}
+
+.project-slider {
+  width: 100%;
+  img {
+    margin:0;
+  }
+}
+
+.slide-legend{
+  font-weight: 400;
+  font-size: 16px;
+  color: $basenoColor1;
+  width: 30px;
+  cursor: pointer;
+}
+//
+/*.slide-previous:hover{
+  i {opacity: 0}
+}
+.slide-previous:hover:after{
+  content: 'Previous Project';
+}
+
+.slide-previous-legend:hover{
+  opacity:1;
+}*/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) and (orientation:landscape){
+  .baseno-copy{
+    color: $basenoColor2;
+    &-header {
+      font-size:30px - 5px;
+      font-weight: 700;
+    }
+    &-text{
+      font-size:25px  - 5px;
+      font-weight: 400;
+    }
+  }
+
+  .header{
+    position:relative;
+    background-image:url($baseBaseno1);
+    background-size:cover;
+    border-bottom: #000000 solid 4px;
+    overflow: hidden;
+    .container{
+      padding-top: 50px;
+      text-align: left;
+    }
+    .baseno-copy {
+      padding-top: 0;
+    }
+    .baseno-down-arrow {
+      color: $basenoColor2;
+      position: absolute;
+      bottom: 3%;
+      left: 50%;
+      i {
+        cursor: pointer;
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+  .header{
+    position:relative;
+    background-image:url($baseBaseno1);
+    background-size:cover;
+    border-bottom: #000000 solid 4px;
+    overflow: hidden;
+    .container{
+      padding-top: 50px;
+      text-align: left;
+    }
+    .baseno-copy {
+      padding-top: 0;
+    }
+    .baseno-down-arrow {
+      color: $basenoColor2;
+      position: absolute;
+      bottom: 3%;
+      left: 50%;
+      i {
+        cursor: pointer;
+        font-size: 30px;
+        font-weight: 700;
+      }
+    }
+  }
+
+}
+
+
+@media all and (orientation:portrait) {
+  /* Styles for Portrait screen */
+}
+
+@media all and (orientation:landscape) {
+  /* Styles for Landscape screen */
+}
+
+
+

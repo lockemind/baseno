@@ -1,3 +1,3 @@
-# draftbaseno
+# baseno
 
-site at http://lockemind.github.io/draftbaseno.
+site at http://lockemind.github.io/baseno.
