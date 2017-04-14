@@ -470,6 +470,12 @@ h2 {
     background-image: url($team4);
   }
 }
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .team-img {
+    width: 250px;
+  }
+}
 
 .baseno-team-member-name {
   margin-bottom: 0;
