@@ -62,6 +62,8 @@ they are in the ```/_includes``` section.
 In this page we have an about, team and blog section.
 
 
+## Content
 
-
-
+Content can be updated by editing or adding files either by the traditional development workflow
+or using the github website to do so. 
+Another great sugestion for content editing is [http://prose.io/](http://prose.io/)
