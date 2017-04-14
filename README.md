@@ -1,10 +1,10 @@
 ![BASENO](http://lockemind.github.io/baseno/images/baseno_logo.png)
 
-#This is BASENO's website repository.
+# This is BASENO's website repository.
 
 It's build using [Jekyll](https://jekyllrb.com/docs/home/) and GitHub pages for hosting.
 
-##So what is Jekyll, exactly?
+## So what is Jekyll, exactly?
 [Jekyll](https://jekyllrb.com/docs/home/) is a simple, blog-aware, static site generator. 
 It takes a template directory containing raw text files 
 in various formats, runs it through a converter (like [Markdown](https://daringfireball.net/projects/markdown/)) 
@@ -19,7 +19,7 @@ from GitHub’s servers for free.
 As such all the code actually used to generate the website is on the ```gh-pages``` branch.
 only changes there will reflect on the actual website.
 
-###Site at http://lockemind.github.io/baseno.
+### Site at http://lockemind.github.io/baseno.
 
 
 To develop locally you have to install Jekyll to generate and serve the site.
@@ -28,7 +28,7 @@ required:
 [Jekyll install instructions](https://jekyllrb.com/docs/installation/)
 
 
-##Website Structure
+## Website Structure
 
 The website itself is divided into: 
 * index.html
