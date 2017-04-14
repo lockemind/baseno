@@ -1,4 +1,5 @@
 #custom-bootstrap-menu.navbar-default {
+  margin-bottom: 0;
   .navbar-brand {
     color: rgba(0, 0, 0, 1);
   }
@@ -30,4 +31,68 @@
   //    background-color: #ffffff;
   //  }
   //}
+}
+
+.baseno-nav {
+  //border-bottom: #000000 solid 2px;
+  //height: 64px;
+  //line-height: 64px;
+  .baseno-menu-links{
+    font-size:16px;
+    font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    li {
+      a {
+        text-decoration: none;
+        color: $basenoColor3;
+        img{
+          display:inline;
+          border-radius: 0;
+        }
+      }
+      display:inline;
+      padding-left: 20px;
+    }
+  }
+  .baseno-menu-social-links{
+    @extend .baseno-menu-links;
+    float: right;
+    padding-top: 12px;
+    li {
+      padding-left: 0;
+    }
+  }
+  /* Extra Small Devices, Phones */
+  @media only screen and (max-width : 480px) {
+    .baseno-menu-social-links{
+      margin-top: 10px;
+    }
+  }
+
+  .navbar-header{
+    margin-left:20px;
+    margin-right:20%;
+  }
+  @media only screen and (max-width : 993px) {
+    .navbar-header{
+      margin-right:5%;
+    }
+    .baseno-menu-social-links{
+      float: right;
+      padding-top: 12px;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+  }
+
+  @media only screen and (max-width : 768px) {
+    .navbar-header{
+      margin-bottom: 15px;
+    }
+    .baseno-menu-social-links{
+      padding-top: 0;
+      padding-left: 0;
+    }
+  }
 }

@@ -56,6 +56,10 @@ h3 {
   padding-bottom: 15px;
 }
 
+.big-spacer {
+  padding-bottom: 30px;
+}
+
 .baseno-big-title {
   font-size: 30px;
   font-weight: 700;
@@ -290,40 +294,7 @@ h3 {
   margin:0px auto;
 }
 
-.baseno-nav {
-  //border-bottom: #000000 solid 2px;
-  //height: 64px;
-  //line-height: 64px;
-  .baseno-menu-links{
-    font-size:16px;
-    font-weight: 700;
-    margin-top: 10px;
-    li {
-      a {
-        text-decoration: none;
-        color: $basenoColor3;
-        img{
-          display:inline;
-          border-radius: 0;
-        }
-      }
-      display:inline;
-      padding-left: 20px;
-    }
-  }
-  .baseno-menu-social-links{
-    @extend .baseno-menu-links;
-    li {
-      padding-left: 0;
-    }
-  }
-  /* Extra Small Devices, Phones */
-  @media only screen and (max-width : 480px) {
-    .baseno-menu-social-links{
-      margin-top: 10px;
-    }
-  }
-}
+
 
 #content h2{
   margin:0px 0px 30px 0px;
@@ -473,9 +444,8 @@ h2 {
 .contact-img1 {
   background-image: url($baseBaseno1);
   background-size: cover;
-  height: 645px;
+  height: 900px;
 }
-
 
 .team-img {
   background-size: cover;
