@@ -4,8 +4,6 @@
 
 // Font variables
 $font-name: "Baseno";
-$font-path-file-name: "/baseno/fonts/Montserrat-Regular";
-$bold-font-path-file-name: "/baseno/fonts/Montserrat-Bold";
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 
@@ -42,6 +40,7 @@ body{
   margin:0px 0px;
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+  font-style: normal;
   font-size: 16px;
   color: black;
   line-height: 1.6;
@@ -144,7 +143,7 @@ h3 {
 }
 
 .baseno-logo {
-  margin-top: 10px;
+  margin-top: 12px;
   img {
     margin-bottom: 0;
   }
@@ -396,6 +395,7 @@ h2 {
   border: $basenoColor1 solid 3px;
   color: $basenoColor1;
   padding: 6px;
+  font-weight: 700;
   &-small {
     @extend .baseno-button;
     font-size: 12px;
@@ -590,11 +590,18 @@ h2 {
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px) {
-
+ .row {
+   margin-left: -20px;
+   margin-right: -20px;
+ }
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px) {
+  .row {
+    margin-left: -25px;
+    margin-right: -25px;
+  }
 
   .header{
     position:relative;
